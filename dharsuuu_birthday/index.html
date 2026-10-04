@@ -1,149 +1,572 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Dharsuuu ❤️</title>
-<meta name="description" content="A little birthday surprise for Dharsuuu.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#0b0710;--rose:#ff668c;--soft:#ffd8e3;--cream:#fff7f4;--muted:#c9b8c0}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:"DM Sans",sans-serif;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 20% 10%,rgba(255,80,130,.16),transparent 32%),radial-gradient(circle at 80% 70%,rgba(145,70,255,.12),transparent 35%);z-index:-2}
-canvas{position:fixed;inset:0;pointer-events:none;z-index:20}
-.gate{position:fixed;inset:0;z-index:50;display:grid;place-items:center;background:linear-gradient(145deg,#100711,#260d1b);transition:opacity .8s,visibility .8s}
-.gate.hide{opacity:0;visibility:hidden}
-.gate-card{text-align:center;padding:38px 28px;max-width:500px}
-.eyebrow{letter-spacing:.25em;text-transform:uppercase;color:#ff9bb4;font-size:.72rem;font-weight:600}
-.gate h1{font:italic 600 clamp(3rem,12vw,6rem) "Playfair Display";margin:18px 0 10px}
-.gate p{color:var(--muted);margin:0 auto 30px;max-width:360px;line-height:1.7}
-.btn{border:0;border-radius:999px;padding:15px 25px;background:linear-gradient(90deg,#ff5e87,#ff8ca9);color:white;font-weight:600;cursor:pointer;box-shadow:0 12px 35px rgba(255,74,120,.22);transition:transform .2s,box-shadow .2s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(255,74,120,.32)}
-main{opacity:0;transform:translateY(20px);transition:opacity 1s,transform 1s}main.show{opacity:1;transform:none}
-section{max-width:1100px;margin:auto;padding:100px 22px}
-.hero{min-height:100vh;display:grid;place-items:center;text-align:center;position:relative}
-.hero h2{font:italic 600 clamp(3.3rem,11vw,7.5rem)/.95 "Playfair Display";margin:18px 0;background:linear-gradient(120deg,#fff,#ffc0d0 55%,#ff6d98);-webkit-background-clip:text;color:transparent}
-.hero .sub{font-size:1.05rem;color:var(--muted);max-width:540px;margin:auto;line-height:1.8}
-.scroll{position:absolute;bottom:30px;color:#9f8e96;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase}
-.section-title{font:italic 500 clamp(2.2rem,6vw,4rem) "Playfair Display";margin:0 0 12px}
-.section-copy{color:var(--muted);line-height:1.8;max-width:650px}
-.gallery{margin-top:40px;display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
-.photo{overflow:hidden;border-radius:22px;background:#181019;min-height:230px;box-shadow:0 20px 50px rgba(0,0,0,.28)}
-.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s}
-.photo:hover img{transform:scale(1.04)}
-.p1{grid-column:span 7;height:500px}.p2{grid-column:span 5;height:500px}.p3,.p4,.p5,.p6{grid-column:span 3;height:310px}.p7{grid-column:span 6;height:380px}.p8{grid-column:span 6;height:380px}
-.letter{margin-top:40px;padding:45px clamp(25px,6vw,70px);border:1px solid rgba(255,255,255,.1);border-radius:28px;background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,102,140,.05));box-shadow:0 25px 80px rgba(0,0,0,.25)}
-.letter p{font:400 1.12rem/2 "Playfair Display";color:#f7e9ed}
-.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:40px}
-.reason{padding:28px;border-radius:22px;background:#130d16;border:1px solid rgba(255,255,255,.07)}
-.reason .num{font:italic 2rem "Playfair Display";color:#ff7898}.reason h3{margin:15px 0 8px}.reason p{color:var(--muted);line-height:1.7;margin:0}
-.final{text-align:center;padding-bottom:120px}.final h2{font:italic 600 clamp(3rem,9vw,6rem) "Playfair Display";margin:20px 0}
-.heart{font-size:4rem;animation:pulse 1.5s infinite;display:inline-block}@keyframes pulse{50%{transform:scale(1.14)}}
-footer{text-align:center;color:#6f6068;padding:0 20px 35px;font-size:.8rem}
-@media(max-width:700px){section{padding:75px 17px}.gallery{grid-template-columns:1fr 1fr}.p1,.p2{grid-column:span 2;height:360px}.p3,.p4,.p5,.p6{grid-column:span 1;height:260px}.p7,.p8{grid-column:span 2;height:300px}.reasons{grid-template-columns:1fr}.letter{padding:30px 22px}.letter p{font-size:1rem}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0710">
+  <meta name="description" content="A little birthday surprise made with love for Dharsuuu.">
+  <title>Happy Birthday, Dharsuuu ❤️</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b0710;
+      --panel: #130d16;
+      --rose: #ff668c;
+      --rose-light: #ff9bb4;
+      --soft: #ffd8e3;
+      --cream: #fff7f4;
+      --muted: #c9b8c0;
+      --line: rgba(255, 255, 255, .1);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 24px;
+    }
+
+    body {
+      position: relative;
+      isolation: isolate;
+      margin: 0;
+      overflow-x: hidden;
+      background: var(--bg);
+      color: var(--cream);
+      font-family: "DM Sans", sans-serif;
+    }
+
+    body.locked { overflow: hidden; }
+
+    body::before {
+      position: fixed;
+      z-index: -1;
+      inset: 0;
+      content: "";
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 15% 8%, rgba(255, 80, 130, .17), transparent 31%),
+        radial-gradient(circle at 88% 65%, rgba(145, 70, 255, .13), transparent 34%);
+    }
+
+    button { font: inherit; }
+
+    button:focus-visible,
+    [tabindex="-1"]:focus-visible {
+      outline: 3px solid var(--soft);
+      outline-offset: 5px;
+    }
+
+    canvas {
+      position: fixed;
+      z-index: 20;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .gate {
+      position: fixed;
+      z-index: 50;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: linear-gradient(145deg, #100711, #260d1b);
+      text-align: center;
+      transition: opacity .8s ease, visibility .8s ease;
+    }
+
+    .gate.hide {
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .gate-card { max-width: 500px; }
+
+    .eyebrow {
+      color: var(--rose-light);
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+    }
+
+    .gate h2 {
+      margin: 18px 0 10px;
+      font: italic 600 clamp(3rem, 12vw, 6rem)/1 "Playfair Display", serif;
+    }
+
+    .gate p {
+      max-width: 380px;
+      margin: 0 auto 30px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 15px 25px;
+      background: linear-gradient(90deg, #ff5e87, #ff8ca9);
+      box-shadow: 0 12px 35px rgba(255, 74, 120, .22);
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 40px rgba(255, 74, 120, .32);
+    }
+
+    main {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    main.show {
+      opacity: 1;
+      transform: none;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 100px 22px;
+    }
+
+    .hero {
+      position: relative;
+      display: grid;
+      min-height: 100vh;
+      min-height: 100svh;
+      place-items: center;
+      padding-top: 80px;
+      padding-bottom: 100px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      margin: 18px 0;
+      background: linear-gradient(120deg, #fff, #ffc0d0 55%, #ff6d98);
+      background-clip: text;
+      color: transparent;
+      font: italic 600 clamp(3.3rem, 11vw, 7.5rem)/.98 "Playfair Display", serif;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero .sub {
+      max-width: 620px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.9;
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 30px;
+      color: #9f8e96;
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin: 0 0 12px;
+      font: italic 500 clamp(2.2rem, 6vw, 4rem)/1.1 "Playfair Display", serif;
+    }
+
+    .section-copy {
+      max-width: 680px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 25px 16px;
+      margin-top: 40px;
+    }
+
+    .photo {
+      min-width: 0;
+      grid-column: span 3;
+      margin: 0;
+    }
+
+    .photo:nth-child(-n+2) { grid-column: span 6; }
+
+    .photo-frame {
+      overflow: hidden;
+      aspect-ratio: 4 / 5;
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: 22px;
+      background: #181019;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, .28);
+    }
+
+    .photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .7s ease;
+    }
+
+    .photo:hover img { transform: scale(1.04); }
+
+    .photo figcaption {
+      display: flex;
+      gap: 11px;
+      align-items: baseline;
+      padding: 12px 4px 0;
+    }
+
+    .caption-index {
+      flex: 0 0 auto;
+      color: var(--rose);
+      font: italic 1.1rem "Playfair Display", serif;
+    }
+
+    .caption-text {
+      color: #eadce1;
+      font: italic 1rem/1.45 "Playfair Display", serif;
+    }
+
+    .letter {
+      margin-top: 35px;
+      padding: 42px clamp(24px, 6vw, 70px);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, .06), rgba(255, 102, 140, .05));
+      box-shadow: 0 25px 80px rgba(0, 0, 0, .25);
+    }
+
+    .letter p {
+      margin: 0;
+      color: #f7e9ed;
+      font: 400 1.12rem/2 "Playfair Display", serif;
+    }
+
+    .reasons {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 15px;
+      margin-top: 35px;
+    }
+
+    .reason {
+      padding: 28px;
+      border: 1px solid rgba(255, 255, 255, .07);
+      border-radius: 22px;
+      background: rgba(19, 13, 22, .82);
+    }
+
+    .reason .num {
+      color: #ff7898;
+      font: italic 2rem "Playfair Display", serif;
+    }
+
+    .reason h3 { margin: 15px 0 8px; }
+
+    .reason p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .final {
+      padding-bottom: 110px;
+      text-align: center;
+    }
+
+    .heart {
+      display: inline-block;
+      color: var(--rose);
+      font-size: 4rem;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      50% { transform: scale(1.14); }
+    }
+
+    .final h2 {
+      margin: 20px 0;
+      font: italic 600 clamp(3rem, 9vw, 6rem)/1.05 "Playfair Display", serif;
+    }
+
+    .final-note {
+      max-width: 620px;
+      margin: 30px auto 0;
+      padding: 25px 28px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, .06);
+      color: var(--soft);
+      font: italic 1.15rem/1.8 "Playfair Display", serif;
+    }
+
+    .final-note[hidden] { display: none; }
+    .final .btn { margin-top: 12px; }
+
+    footer {
+      padding: 0 20px 35px;
+      color: #8b7882;
+      font-size: .82rem;
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      section { padding: 76px 17px; }
+      .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px 12px;
+      }
+      .photo,
+      .photo:nth-child(-n+2) { grid-column: span 1; }
+      .photo:nth-child(-n+2) { grid-column: span 2; }
+      .photo-frame { border-radius: 17px; }
+      .photo figcaption { gap: 8px; padding-top: 9px; }
+      .caption-text { font-size: .95rem; }
+      .reasons { grid-template-columns: 1fr; }
+      .letter { padding: 30px 22px; }
+      .letter p { font-size: 1rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+      .btn:hover,
+      .photo:hover img { transform: none; }
+    }
+  </style>
 </head>
-<body>
-<canvas id="hearts"></canvas>
+<body class="locked">
+  <canvas id="hearts" aria-hidden="true"></canvas>
 
-<div class="gate" id="gate">
-  <div class="gate-card">
-    <div class="eyebrow">A little surprise for</div>
-    <h1>Dharsuuu ❤️</h1>
-    <p>There are things that are easier to feel than to say. So I made you a tiny corner of the internet.</p>
-    <button class="btn" id="open">Open your surprise ✨</button>
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate-card">
+      <div class="eyebrow">A little surprise for</div>
+      <h2 id="gate-title">Dharsuuu ❤️</h2>
+      <p>I made you a little corner of the internet—full of your smiles, our silliness, and all the love I have for you.</p>
+      <button class="btn" id="open" type="button" aria-controls="main">Open your surprise ✨</button>
+    </div>
   </div>
-</div>
 
-<main id="main">
-  <section class="hero">
-    <div>
-      <div class="eyebrow">Happy Birthday</div>
-      <h2>To my Dharsuuu</h2>
-      <p class="sub">If I could give you one thing today, it would be the ability to see yourself through my eyes — and understand just how special you are to me.</p>
-    </div>
-    <div class="scroll">scroll slowly ↓</div>
-  </section>
+  <main id="main" inert aria-hidden="true">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <div class="eyebrow">Happy Birthday</div>
+        <h1 id="hero-title" tabindex="-1">To my Dharsuuu</h1>
+        <p class="sub">From your beautiful saree moments to our very unserious filter selfies, every picture reminds me how lucky I am to have you in my life.</p>
+      </div>
+      <div class="scroll-hint" aria-hidden="true">Scroll slowly ↓</div>
+    </section>
 
-  <section>
-    <div class="eyebrow">The memories</div>
-    <h2 class="section-title">A few moments I want to keep forever.</h2>
-    <p class="section-copy">Some are beautiful. Some are ridiculous. That's exactly why I love them.</p>
-    <div class="gallery">
-      <div class="photo p1"><img src="assets/photo1.jpg" alt="Dharsuuu"></div>
-      <div class="photo p2"><img src="assets/photo2.jpg" alt="Us"></div>
-      <div class="photo p3"><img src="assets/photo3.jpg" alt="Memory"></div>
-      <div class="photo p4"><img src="assets/photo4.jpg" alt="Memory"></div>
-      <div class="photo p5"><img src="assets/photo5.jpg" alt="Memory"></div>
-      <div class="photo p6"><img src="assets/photo6.jpg" alt="Memory"></div>
-      <div class="photo p7"><img src="assets/photo7.jpg" alt="Dharsuuu"></div>
-      <div class="photo p8"><img src="assets/photo8.jpg" alt="Us"></div>
-    </div>
-  </section>
+    <section aria-labelledby="memories-title">
+      <div class="eyebrow">Little pieces of us</div>
+      <h2 class="section-title" id="memories-title">A few moments I want to keep forever.</h2>
+      <p class="section-copy">The elegant photos, the goofy ones, and everything in between—I love every version of you.</p>
 
-  <section>
-    <div class="eyebrow">A letter</div>
-    <h2 class="section-title">For you, Dharsuuu.</h2>
-    <div class="letter">
-      <p>
-        Happy birthday to the girl who somehow became one of the most important parts of my life.
-        <br><br>
-        I don't need a perfect story. I want ours — the silly photos, the random moments, the teasing,
-        the little things only we understand, and all the memories we haven't made yet.
-        <br><br>
-        You deserve to be happy, genuinely happy. I hope this year gives you more reasons to smile,
-        more confidence in yourself, and everything you've been quietly wishing for.
-        <br><br>
-        And selfishly, I hope I get to be there for a lot of it.
-        <br><br>
-        <strong>Happy Birthday, Dharsuuu. ❤️</strong>
-      </p>
-    </div>
-  </section>
+      <div class="gallery">
+        <figure class="photo">
+          <div class="photo-frame"><img src="assets/photo1.jpg" alt="Dharsuuu smiling outdoors in a purple outfit" loading="lazy" decoding="async"></div>
+          <figcaption><span class="caption-index" aria-hidden="true">01</span><span class="caption-text">A little rooftop sunshine</span></figcaption>
+        </figure>
+        <figure class="photo">
+          <div class="photo-frame"><img src="assets/photo2.jpg" alt="Dharsuuu taking a mirror selfie in a brown and gold saree" loading="lazy" decoding="async"></div>
+          <figcaption><span class="caption-index" aria-hidden="true">02</span><span class="caption-text">Saree selfie, forever iconic</span></figcaption>
+        </figure>
+        <figure class="photo">
+          <div class="photo-frame"><img src="assets/photo3.jpg" alt="Dharsuuu standing in a brown and gold saree" loading="lazy" decoding="async"></div>
+          <figcaption><span class="caption-index" aria-hidden="true">03</span><span class="caption-text">Elegance, effortlessly</span></figcaption>
+        </figure>
+        <figure class="photo">
+          <div class="photo-frame"><img src="assets/photo4.jpg" alt="A playful selfie of us with puppy-face filters" loading="lazy" decoding="async"></div>
+          <figcaption><span class="caption-index" aria-hidden="true">04</span><span class="caption-text">Our puppy-filter era</span></figcaption>
+        </figure>
+        <figure class="photo">
+          <div class="photo-frame"><img src="assets/photo5.jpg" alt="A playful selfie of us with floating heart filters" loading="lazy" decoding="async"></div>
+          <figcaption><span class="caption-index" aria-hidden="true">05</span><span class="caption-text">The hearts knew what was up</span></figcaption>
+        </figure>
+        <figure class="photo">
+          <div class="photo-frame"><img src="assets/photo6.jpg" alt="Us posing playfully for a selfie" loading="lazy" decoding="async"></div>
+          <figcaption><span class="caption-index" aria-hidden="true">06</span><span class="caption-text">Never a normal selfie with us</span></figcaption>
+        </figure>
+        <figure class="photo">
+          <div class="photo-frame"><img src="assets/photo7.jpg" alt="Us taking a silly selfie with an animated filter" loading="lazy" decoding="async"></div>
+          <figcaption><span class="caption-index" aria-hidden="true">07</span><span class="caption-text">The outtakes are my favorite</span></figcaption>
+        </figure>
+        <figure class="photo">
+          <div class="photo-frame"><img src="assets/photo8.jpg" alt="A clear selfie of us with puppy filters" loading="lazy" decoding="async"></div>
+          <figcaption><span class="caption-index" aria-hidden="true">08</span><span class="caption-text">Two goofballs, one camera</span></figcaption>
+        </figure>
+        <figure class="photo">
+          <div class="photo-frame"><img src="assets/photo9.jpg" alt="A black-and-white selfie of us wearing superhero face filters" loading="lazy" decoding="async"></div>
+          <figcaption><span class="caption-index" aria-hidden="true">09</span><span class="caption-text">Superheroes on selfie duty</span></figcaption>
+        </figure>
+        <figure class="photo">
+          <div class="photo-frame"><img src="assets/photo10.jpg" alt="A sideways selfie of us with playful puppy filters" loading="lazy" decoding="async"></div>
+          <figcaption><span class="caption-index" aria-hidden="true">10</span><span class="caption-text">Still my favorite co-star</span></figcaption>
+        </figure>
+      </div>
+    </section>
 
-  <section>
-    <div class="eyebrow">Why you</div>
-    <h2 class="section-title">Three unfair advantages you have.</h2>
-    <div class="reasons">
-      <div class="reason"><div class="num">01</div><h3>Your smile</h3><p>It can completely change the mood of a moment without you even trying.</p></div>
-      <div class="reason"><div class="num">02</div><h3>Your chaos</h3><p>Life with you is never completely predictable. Honestly, I wouldn't want it any other way.</p></div>
-      <div class="reason"><div class="num">03</div><h3>You being you</h3><p>No performance, no pretending. Just you. That's the version I want around.</p></div>
-    </div>
-  </section>
+    <section aria-labelledby="letter-title">
+      <div class="eyebrow">A letter</div>
+      <h2 class="section-title" id="letter-title">For you, Dharsuuu.</h2>
+      <div class="letter">
+        <p>
+          Happy birthday to the girl who makes even ordinary days feel worth remembering.
+          <br><br>
+          Looking through these photos makes me smile: your beautiful saree moments, that rooftop smile, and our gloriously silly filter selfies. I love that we can be dressed up one minute and complete goofballs the next.
+          <br><br>
+          You bring so much warmth into my life just by being exactly who you are. I hope this year brings you peace, confidence, laughter, and all the little things your heart has been wishing for.
+          <br><br>
+          Thank you for every laugh, every little moment, and everything still ahead of us. I’m so grateful for you.
+          <br><br>
+          <strong>Happy Birthday, Dharsuuu. I love you. ❤️</strong>
+        </p>
+      </div>
+    </section>
 
-  <section class="final">
-    <div class="heart">♥</div>
-    <div class="eyebrow">One last thing</div>
-    <h2>Happy Birthday,<br>Dharsuuu.</h2>
-    <p class="section-copy" style="margin:auto">This little website will disappear eventually. The memories shouldn't.</p>
-    <br>
-    <button class="btn" onclick="makeItRain()">One more surprise 💕</button>
-  </section>
-  <footer>Made with too much love, probably. — Yours ❤️</footer>
-</main>
+    <section aria-labelledby="reasons-title">
+      <div class="eyebrow">Why you</div>
+      <h2 class="section-title" id="reasons-title">A few of my favorite things about you.</h2>
+      <div class="reasons">
+        <article class="reason">
+          <div class="num">01</div>
+          <h3>Your smile</h3>
+          <p>The kind that makes a photo—and my whole day—better.</p>
+        </article>
+        <article class="reason">
+          <div class="num">02</div>
+          <h3>Your playful side</h3>
+          <p>One minute it’s a lovely picture, the next it’s puppy filters. I love that we can be ridiculous together.</p>
+        </article>
+        <article class="reason">
+          <div class="num">03</div>
+          <h3>Just being you</h3>
+          <p>You don’t have to do anything special to be special to me. Being yourself is enough.</p>
+        </article>
+      </div>
+    </section>
 
-<script>
-const gate=document.getElementById('gate'),main=document.getElementById('main');
-document.getElementById('open').addEventListener('click',()=>{
-  gate.classList.add('hide'); main.classList.add('show'); makeItRain();
-});
-const canvas=document.getElementById('hearts'),ctx=canvas.getContext('2d');
-let hearts=[];
-function resize(){canvas.width=innerWidth;canvas.height=innerHeight} resize(); addEventListener('resize',resize);
-function makeItRain(){
-  for(let i=0;i<55;i++) hearts.push({x:Math.random()*canvas.width,y:-20-Math.random()*300,s:8+Math.random()*15,v:1+Math.random()*3,a:Math.random()*6.28});
-}
-function draw(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  hearts=hearts.filter(h=>h.y<canvas.height+30);
-  hearts.forEach(h=>{
-    h.y+=h.v;h.a+=.02;h.x+=Math.sin(h.a)*.5;
-    ctx.save();ctx.translate(h.x,h.y);ctx.rotate(Math.sin(h.a)*.2);ctx.fillStyle='rgba(255,105,145,.8)';
-    ctx.font=h.s+'px serif';ctx.fillText('♥',0,0);ctx.restore();
-  });requestAnimationFrame(draw);
-} draw();
-</script>
+    <section class="final" aria-labelledby="final-title">
+      <span class="heart" aria-hidden="true">♥</span>
+      <div class="eyebrow">One last thing</div>
+      <h2 id="final-title">Happy Birthday,<br>Dharsuuu.</h2>
+      <p class="section-copy" style="margin: 0 auto 18px;">This page ends here; the memories and love don’t. Here’s to making many more together. ❤️</p>
+      <button class="btn" id="last-surprise" type="button" aria-expanded="false" aria-controls="final-note">Open your last note 💌</button>
+      <div class="final-note" id="final-note" role="status" aria-live="polite" hidden>
+        No filter for this part: I love you, Dharsuuu. I hope today reminds you how treasured, appreciated, and wonderfully one of a kind you are. ❤️
+      </div>
+    </section>
+
+    <footer>Made with all my love, just for you. — Yours ❤️</footer>
+  </main>
+
+  <script>
+    const gate = document.getElementById("gate");
+    const main = document.getElementById("main");
+    const openButton = document.getElementById("open");
+    const lastSurpriseButton = document.getElementById("last-surprise");
+    const finalNote = document.getElementById("final-note");
+    const canvas = document.getElementById("hearts");
+    const context = canvas.getContext("2d");
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let hearts = [];
+    let animationFrame = 0;
+
+    function resizeCanvas() {
+      if (!context) return;
+      const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.round(window.innerWidth * pixelRatio);
+      canvas.height = Math.round(window.innerHeight * pixelRatio);
+      context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+    }
+
+    function drawHearts() {
+      animationFrame = 0;
+      if (!context) return;
+
+      context.clearRect(0, 0, window.innerWidth, window.innerHeight);
+      hearts = hearts.filter((heart) => heart.y < window.innerHeight + 30);
+
+      hearts.forEach((heart) => {
+        heart.y += heart.speed;
+        heart.angle += .02;
+        heart.x += Math.sin(heart.angle) * .5;
+
+        context.save();
+        context.translate(heart.x, heart.y);
+        context.rotate(Math.sin(heart.angle) * .2);
+        context.fillStyle = "rgba(255, 105, 145, .82)";
+        context.font = `${heart.size}px serif`;
+        context.fillText("♥", 0, 0);
+        context.restore();
+      });
+
+      if (hearts.length) animationFrame = window.requestAnimationFrame(drawHearts);
+    }
+
+    function makeItRain(count = 50) {
+      if (prefersReducedMotion || !context) return;
+
+      for (let index = 0; index < count; index += 1) {
+        hearts.push({
+          x: Math.random() * window.innerWidth,
+          y: -20 - Math.random() * 300,
+          size: 8 + Math.random() * 15,
+          speed: 1 + Math.random() * 3,
+          angle: Math.random() * Math.PI * 2
+        });
+      }
+
+      if (!animationFrame) animationFrame = window.requestAnimationFrame(drawHearts);
+    }
+
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas, { passive: true });
+
+    openButton.addEventListener("click", () => {
+      gate.classList.add("hide");
+      gate.setAttribute("aria-hidden", "true");
+      openButton.disabled = true;
+      document.body.classList.remove("locked");
+      main.removeAttribute("inert");
+      main.removeAttribute("aria-hidden");
+      main.classList.add("show");
+      document.getElementById("hero-title").focus({ preventScroll: true });
+      makeItRain();
+    });
+
+    lastSurpriseButton.addEventListener("click", () => {
+      if (!finalNote.hidden) return;
+      finalNote.hidden = false;
+      lastSurpriseButton.setAttribute("aria-expanded", "true");
+      lastSurpriseButton.textContent = "Opened with love 💗";
+      makeItRain(35);
+    });
+  </script>
 </body>
 </html>
