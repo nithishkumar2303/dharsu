@@ -288,6 +288,121 @@
       line-height: 1.7;
     }
 
+    .wish-section { text-align: center; }
+
+    .wish-panel {
+      position: relative;
+      overflow: hidden;
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 42px clamp(20px, 5vw, 52px) 38px;
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: 30px;
+      background: linear-gradient(145deg, rgba(255, 255, 255, .055), rgba(255, 102, 140, .08));
+      box-shadow: 0 25px 80px rgba(0, 0, 0, .25);
+    }
+
+    .wish-panel::before {
+      position: absolute;
+      top: -130px;
+      left: 50%;
+      width: 340px;
+      height: 260px;
+      border-radius: 50%;
+      background: rgba(255, 102, 140, .12);
+      content: "";
+      filter: blur(65px);
+      pointer-events: none;
+      transform: translateX(-50%);
+    }
+
+    .wish-panel > * { position: relative; }
+    .wish-section .section-title { margin-top: 12px; }
+    .wish-section .section-copy { margin: 0 auto; text-align: center; }
+
+    .cake-wrap {
+      width: min(320px, 78vw);
+      margin: 4px auto 8px;
+    }
+
+    .cake-art {
+      display: block;
+      width: 100%;
+      height: auto;
+      overflow: visible;
+      filter: drop-shadow(0 16px 18px rgba(0, 0, 0, .2));
+    }
+
+    .cake-flame {
+      transform-box: fill-box;
+      transform-origin: center bottom;
+      animation: candle-flicker .9s ease-in-out infinite alternate;
+      transition: opacity .35s ease, transform .35s ease;
+    }
+
+    .cake-smoke {
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity .2s ease;
+    }
+
+    .wish-section.blown-out .cake-flame {
+      opacity: 0;
+      transform: scale(.12) translateY(12px);
+      animation: none;
+    }
+
+    .wish-section.blown-out .cake-smoke {
+      opacity: .82;
+      animation: smoke-rise 1.8s ease-out forwards;
+    }
+
+    @keyframes candle-flicker {
+      from { transform: rotate(-3deg) scale(.96); }
+      to { transform: rotate(3deg) scale(1.04); }
+    }
+
+    @keyframes smoke-rise {
+      to { opacity: 0; transform: translateY(-17px); }
+    }
+
+    .wish-controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .wish-controls .btn { margin: 0; }
+
+    .btn-secondary {
+      border: 1px solid rgba(255, 255, 255, .18);
+      background: rgba(255, 255, 255, .04);
+      box-shadow: none;
+      color: var(--soft);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, .1);
+      box-shadow: none;
+    }
+
+    .wish-note {
+      max-width: 590px;
+      margin: 18px auto 0;
+      color: #a996a0;
+      font-size: .82rem;
+      line-height: 1.65;
+    }
+
+    .wish-status {
+      min-height: 1.5em;
+      margin: 14px auto 0;
+      color: var(--rose-light);
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
     .final {
       padding-bottom: 110px;
       text-align: center;
@@ -343,6 +458,9 @@
       .photo figcaption { gap: 8px; padding-top: 9px; }
       .caption-text { font-size: .95rem; }
       .reasons { grid-template-columns: 1fr; }
+      .wish-panel { padding: 34px 18px 30px; border-radius: 24px; }
+      .wish-controls { flex-direction: column; align-items: stretch; }
+      .wish-controls .btn { width: 100%; }
       .letter { padding: 30px 22px; }
       .letter p { font-size: 1rem; }
     }
@@ -471,6 +589,81 @@
       </div>
     </section>
 
+    <section class="wish-section" id="birthday-wish" aria-labelledby="wish-title">
+      <div class="wish-panel">
+        <div class="eyebrow">A birthday wish, just for you</div>
+        <h2 class="section-title" id="wish-title">One candle. One wish.</h2>
+        <p class="section-copy">Close your eyes and make a wish. When you’re ready, blow gently toward your microphone to put out your candle.</p>
+
+        <div class="cake-wrap">
+          <svg class="cake-art" viewBox="0 0 320 290" role="img" aria-labelledby="cake-svg-title cake-svg-desc">
+            <title id="cake-svg-title">A pink birthday cake with one lit candle</title>
+            <desc id="cake-svg-desc">A little frosted birthday cake, waiting for Dharsuuu to make a wish and blow out its candle.</desc>
+            <defs>
+              <linearGradient id="cake-side" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ff8aa8" />
+                <stop offset="1" stop-color="#bd3d69" />
+              </linearGradient>
+              <linearGradient id="cake-candle" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#ffd8e3" />
+                <stop offset=".5" stop-color="#fff4f6" />
+                <stop offset="1" stop-color="#ff9bb4" />
+              </linearGradient>
+              <linearGradient id="cake-flame-fill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#fff2a6" />
+                <stop offset="1" stop-color="#ff7d47" />
+              </linearGradient>
+            </defs>
+
+            <ellipse cx="160" cy="252" rx="125" ry="17" fill="#21131d" opacity=".8" />
+            <ellipse cx="160" cy="239" rx="123" ry="18" fill="#ffc0d0" />
+            <ellipse cx="160" cy="235" rx="114" ry="12" fill="#ffe8ed" />
+
+            <rect x="53" y="161" width="214" height="78" rx="19" fill="url(#cake-side)" />
+            <ellipse cx="160" cy="162" rx="107" ry="25" fill="#fff4f6" />
+            <path d="M53 163 C68 153 83 173 100 163 C117 153 133 174 151 163 C169 152 185 175 203 163 C222 152 240 172 267 162 L267 179 C258 184 262 200 249 201 C236 201 242 182 229 181 C216 180 222 199 209 200 C196 201 201 181 188 180 C175 179 181 198 168 199 C155 200 162 181 149 180 C136 179 142 198 129 199 C116 200 122 181 109 180 C96 179 101 195 88 196 C75 197 80 178 66 177 L53 181 Z" fill="#fff4f6" />
+
+            <g fill="#ffd8e3" opacity=".9">
+              <circle cx="82" cy="212" r="3" />
+              <circle cx="111" cy="224" r="3" />
+              <circle cx="143" cy="210" r="3" />
+              <circle cx="177" cy="224" r="3" />
+              <circle cx="209" cy="210" r="3" />
+              <circle cx="239" cy="223" r="3" />
+            </g>
+            <g fill="#ffcf78">
+              <circle cx="116" cy="156" r="4" />
+              <circle cx="204" cy="156" r="4" />
+            </g>
+            <g fill="#ff668c">
+              <circle cx="129" cy="151" r="3" />
+              <circle cx="190" cy="151" r="3" />
+            </g>
+
+            <rect x="153" y="82" width="14" height="82" rx="7" fill="url(#cake-candle)" />
+            <path d="M154 101 H166 M154 119 H166 M154 137 H166 M154 154 H166" stroke="#ff8eaa" stroke-width="3" stroke-linecap="round" opacity=".75" />
+            <path d="M160 82 V74" stroke="#5b3440" stroke-width="3" stroke-linecap="round" />
+
+            <g class="cake-smoke" fill="none" stroke="#f5d8df" stroke-linecap="round" stroke-width="3">
+              <path d="M158 73 C145 62 169 57 157 45" />
+              <path d="M165 69 C177 59 159 54 169 43" opacity=".7" />
+            </g>
+            <g class="cake-flame" aria-hidden="true">
+              <path d="M160 31 C153 43 145 52 148 63 C150 73 169 76 173 64 C177 53 166 39 160 31 Z" fill="#ff874e" />
+              <path d="M160 44 C156 52 153 58 156 64 C158 69 166 69 168 63 C170 57 164 49 160 44 Z" fill="url(#cake-flame-fill)" />
+            </g>
+          </svg>
+        </div>
+
+        <div class="wish-controls">
+          <button class="btn" id="mic-blow" type="button" aria-pressed="false">Blow it out with the mic 🎤</button>
+          <button class="btn btn-secondary" id="tap-blow" type="button">Tap to blow it out</button>
+        </div>
+        <p class="wish-note">Microphone access is optional. If you allow it, sound is checked on this device only—nothing is recorded or uploaded. The mic turns off when the candle goes out, or after 25 seconds.</p>
+        <p class="wish-status" id="wish-status" role="status" aria-live="polite">Take your time—your candle is waiting. ✨</p>
+      </div>
+    </section>
+
     <section class="final" aria-labelledby="final-title">
       <span class="heart" aria-hidden="true">♥</span>
       <div class="eyebrow">One last thing</div>
@@ -500,11 +693,27 @@ There are still so many memories left for us to make. ❤️
     const openButton = document.getElementById("open");
     const lastSurpriseButton = document.getElementById("last-surprise");
     const finalNote = document.getElementById("final-note");
+    const wishSection = document.getElementById("birthday-wish");
+    const wishStatus = document.getElementById("wish-status");
+    const microphoneButton = document.getElementById("mic-blow");
+    const tapBlowButton = document.getElementById("tap-blow");
     const canvas = document.getElementById("hearts");
     const context = canvas.getContext("2d");
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let hearts = [];
     let animationFrame = 0;
+    let microphoneStream = null;
+    let micAudioContext = null;
+    let analyser = null;
+    let audioSamples = null;
+    let microphoneFrame = 0;
+    let microphoneTimeout = 0;
+    let microphoneListening = false;
+    let microphoneRequestPending = false;
+    let candleBlownOut = false;
+    let ambientLevelTotal = 0;
+    let ambientSamples = 0;
+    let loudSamples = 0;
 
     function resizeCanvas() {
       if (!context) return;
@@ -554,8 +763,147 @@ There are still so many memories left for us to make. ❤️
       if (!animationFrame) animationFrame = window.requestAnimationFrame(drawHearts);
     }
 
+    function stopMicrophone() {
+      microphoneListening = false;
+      if (microphoneFrame) {
+        window.cancelAnimationFrame(microphoneFrame);
+        microphoneFrame = 0;
+      }
+      if (microphoneTimeout) {
+        window.clearTimeout(microphoneTimeout);
+        microphoneTimeout = 0;
+      }
+      if (microphoneStream) {
+        microphoneStream.getTracks().forEach((track) => track.stop());
+        microphoneStream = null;
+      }
+      if (micAudioContext) {
+        const contextToClose = micAudioContext;
+        micAudioContext = null;
+        contextToClose.close().catch(() => {});
+      }
+      analyser = null;
+      audioSamples = null;
+      microphoneButton.setAttribute("aria-pressed", "false");
+      microphoneButton.disabled = candleBlownOut;
+      if (!candleBlownOut) microphoneButton.textContent = "Blow it out with the mic 🎤";
+    }
+
+    function extinguishCandle() {
+      if (candleBlownOut) return;
+      candleBlownOut = true;
+      stopMicrophone();
+      wishSection.classList.add("blown-out");
+      microphoneButton.disabled = true;
+      microphoneButton.textContent = "Wish made! ✨";
+      tapBlowButton.hidden = true;
+      wishStatus.textContent = "Wish made! May it come true, Dharsuuu. Happy birthday! ✨";
+      makeItRain(65);
+    }
+
+    function detectBlow() {
+      if (!microphoneListening || !analyser || !audioSamples) return;
+      analyser.getFloatTimeDomainData(audioSamples);
+
+      let energy = 0;
+      for (const sample of audioSamples) energy += sample * sample;
+      const level = Math.sqrt(energy / audioSamples.length);
+
+      if (ambientSamples < 18) {
+        ambientLevelTotal += level;
+        ambientSamples += 1;
+      } else {
+        const ambientAverage = ambientLevelTotal / ambientSamples;
+        const threshold = Math.max(.065, ambientAverage * 2.8 + .025);
+        loudSamples = level > threshold ? loudSamples + 1 : Math.max(0, loudSamples - 1);
+        if (loudSamples >= 7) {
+          extinguishCandle();
+          return;
+        }
+      }
+
+      microphoneFrame = window.requestAnimationFrame(detectBlow);
+    }
+
+    async function toggleMicrophone() {
+      if (candleBlownOut || microphoneRequestPending) return;
+      if (microphoneListening) {
+        stopMicrophone();
+        wishStatus.textContent = "Microphone off. Your candle is still lit—try again or tap to blow it out.";
+        return;
+      }
+      if (!navigator.mediaDevices || typeof navigator.mediaDevices.getUserMedia !== "function") {
+        wishStatus.textContent = "Microphone access isn’t available here. You can still tap to blow out the candle.";
+        return;
+      }
+
+      const AudioContextConstructor = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContextConstructor) {
+        wishStatus.textContent = "This browser can’t listen for a blow, but you can still tap to blow out the candle.";
+        return;
+      }
+
+      microphoneRequestPending = true;
+      microphoneButton.disabled = true;
+      microphoneButton.textContent = "Requesting microphone…";
+      wishStatus.textContent = "Allow microphone access, then blow gently when you’re ready.";
+
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        if (candleBlownOut || document.hidden) {
+          stream.getTracks().forEach((track) => track.stop());
+          return;
+        }
+
+        microphoneStream = stream;
+        micAudioContext = new AudioContextConstructor();
+        await micAudioContext.resume();
+        if (candleBlownOut || document.hidden) {
+          stopMicrophone();
+          return;
+        }
+
+        const source = micAudioContext.createMediaStreamSource(microphoneStream);
+        analyser = micAudioContext.createAnalyser();
+        analyser.fftSize = 1024;
+        source.connect(analyser);
+        audioSamples = new Float32Array(analyser.fftSize);
+        ambientLevelTotal = 0;
+        ambientSamples = 0;
+        loudSamples = 0;
+        microphoneListening = true;
+        microphoneButton.disabled = false;
+        microphoneButton.textContent = "Stop listening";
+        microphoneButton.setAttribute("aria-pressed", "true");
+        wishStatus.textContent = "I’m listening. Make your wish, then blow gently toward the mic.";
+        microphoneTimeout = window.setTimeout(() => {
+          if (!microphoneListening) return;
+          stopMicrophone();
+          wishStatus.textContent = "The mic has switched off. Your candle is still lit—try again or tap to blow it out.";
+        }, 25000);
+        microphoneFrame = window.requestAnimationFrame(detectBlow);
+      } catch (error) {
+        stopMicrophone();
+        if (!candleBlownOut) {
+          wishStatus.textContent = "I couldn’t access the microphone. Check its permission, or tap to blow out the candle instead.";
+        }
+      } finally {
+        microphoneRequestPending = false;
+        if (!candleBlownOut && !microphoneListening) microphoneButton.disabled = false;
+      }
+    }
+
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas, { passive: true });
+    microphoneButton.addEventListener("click", toggleMicrophone);
+    tapBlowButton.addEventListener("click", extinguishCandle);
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden && microphoneListening) {
+        stopMicrophone();
+        wishStatus.textContent = "Microphone switched off because the page went into the background. Your candle is still lit.";
+      }
+    });
+    window.addEventListener("pagehide", stopMicrophone);
 
     openButton.addEventListener("click", () => {
       gate.classList.add("hide");

@@ -7,6 +7,7 @@ CUSTOMIZE
 - Edit the birthday message and captions directly in index.html.
 - Replace the images in assets/ while keeping the filenames photo1.jpg through photo10.jpg.
 - The photo captions and alt text are in the matching figure blocks in index.html.
+- The cake can be blown out with an optional microphone interaction; tapping the fallback button works without mic access. Real blow detection needs HTTPS (Vercel provides it) or localhost.
 - If you add music later, use a play button rather than autoplay so it works reliably on phones.
 
 DEPLOY TO VERCEL
