@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For Dharsuuu — Happy Birthday ❤</title>
+<meta name="description" content="A little corner of the internet, made for Dharsuuu's birthday. Memories, a letter, and one wish.">
+<meta name="theme-color" content="#0b0710">
+<meta name="color-scheme" content="dark">
+<meta name="author" content="Nithish">
+<!-- Remove the next line if you ever want Google to index this page. -->
+<meta name="robots" content="noindex, nofollow">
+
+<!-- ============================================================
+     SOCIAL PREVIEW
+     WhatsApp / Telegram / Instagram DM previews work with the path
+     below. For a perfect card on X (Twitter) and LinkedIn, replace
+     both values with your live URL, e.g.
+     https://your-project.vercel.app/dharsuuu_birthday/assets/photo5.jpg
+     ============================================================ -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Happy Birthday, Dharsuuu ❤">
+<meta property="og:description" content="A tiny corner of the internet, made just for you. Open it.">
+<meta property="og:image" content="dharsuuu_birthday/assets/photo5.jpg">
+<meta property="og:image:alt" content="Happy Birthday Dharsuuu — a little surprise">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Happy Birthday, Dharsuuu ❤">
+<meta name="twitter:description" content="A tiny corner of the internet, made just for you. Open it.">
+<meta name="twitter:image" content="dharsuuu_birthday/assets/photo5.jpg">
+
+<!-- inline heart icon: works even though this site is a single file -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20role%3D%22img%22%20aria-label%3D%22Dharsuuu%22%3E%20%3Cdefs%3E%20%3ClinearGradient%20id%3D%22heart%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23ffa2b8%22%2F%3E%20%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23ff668c%22%2F%3E%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23ff3f6f%22%2F%3E%20%3C%2FlinearGradient%3E%20%3CradialGradient%20id%3D%22glow%22%20cx%3D%22.5%22%20cy%3D%22.42%22%20r%3D%22.6%22%3E%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23ff668c%22%20stop-opacity%3D%22.38%22%2F%3E%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23ff668c%22%20stop-opacity%3D%220%22%2F%3E%20%3C%2FradialGradient%3E%20%3C%2Fdefs%3E%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2215%22%20fill%3D%22%2312070f%22%2F%3E%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2215%22%20fill%3D%22url%28%23glow%29%22%2F%3E%20%3Cpath%20fill%3D%22url%28%23heart%29%22%20d%3D%22M32%2051.5S11.5%2039%2011.5%2026.2C11.5%2019.2%2017%2013.5%2024%2013.5c3.5%200%206.4%201.7%208%204.3%201.6-2.6%204.5-4.3%208-4.3%207%200%2012.5%205.7%2012.5%2012.7C52.5%2039%2032%2051.5%2032%2051.5Z%22%2F%3E%20%3C%2Fsvg%3E">
+
+<!-- fonts (if these are ever blocked, the page falls back to Georgia / system sans and still looks good) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================================
+   DHARSUUU BIRTHDAY — single file site
+   Sections in this file:  1 fonts  2 tokens  3 gate  4 hero
+   5 gallery  6 letter  7 candles  8 final  9 lightbox  10 js
+   Everything you'd normally edit is plain text further down.
+   ========================================================= */
+
+/* ---------- 1. tokens ---------- */
+:root{
+  --bg:#0b0710; --bg-2:#130d16;
+  --rose:#ff668c; --rose-deep:#ff3f6f; --rose-soft:#ff9bb4;
+  --soft:#ffd8e3; --cream:#fff7f4; --muted:#c9b8c0; --faint:#8f7f88;
+  --line:rgba(255,255,255,.09);
+  --sans:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --serif:"Playfair Display",Georgia,"Times New Roman",serif;
+  --pad:clamp(1.1rem,4vw,1.5rem);
+  --radius:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--cream);font-family:var(--sans);
+  font-size:clamp(1rem,.95rem + .2vw,1.06rem);line-height:1.7;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;
+  background:radial-gradient(circle at 18% 8%,rgba(255,80,130,.17),transparent 34%),
+             radial-gradient(circle at 82% 68%,rgba(145,70,255,.13),transparent 38%),
+             radial-gradient(circle at 50% 110%,rgba(255,110,150,.10),transparent 45%)}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--rose);color:#fff;padding:.7rem 1.1rem;z-index:100}
+.skip:focus{left:1rem;top:1rem}
+#hearts{position:fixed;inset:0;pointer-events:none;z-index:20}
+.progress{position:fixed;inset:0 auto auto 0;height:3px;width:0;z-index:40;
+  background:linear-gradient(90deg,var(--rose-deep),var(--rose-soft))}
+/* If scripts are blocked, never trap the visitor behind the intro gate. */
+.no-js .gate{display:none}
+.no-js main{opacity:1;transform:none}
+
+/* ---------- 2. small pieces ---------- */
+.eyebrow{letter-spacing:.25em;text-transform:uppercase;color:var(--rose-soft);
+  font-size:.7rem;font-weight:600}
+h1,h2,h3{line-height:1.1;font-family:var(--serif);font-style:italic;font-weight:600}
+.btn{border:0;border-radius:999px;padding:.95rem 1.6rem;cursor:pointer;
+  font:600 1rem/1 var(--sans);color:#fff;font-style:normal;
+  background:linear-gradient(90deg,var(--rose-deep),#ff8ca9);
+  box-shadow:0 12px 34px rgba(255,74,120,.24);
+  transition:transform .2s ease,box-shadow .2s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(255,74,120,.34)}
+.btn:active{transform:translateY(0)}
+.btn.ghost{background:transparent;color:var(--soft);border:1px solid var(--line);box-shadow:none}
+.btn.ghost:hover{border-color:var(--rose);color:#fff}
+
+/* ---------- 3. gate ---------- */
+.gate{position:fixed;inset:0;z-index:50;display:grid;place-items:center;
+  background:linear-gradient(150deg,#100711,#260d1b 60%,#14080f);
+  transition:opacity .7s ease,visibility .7s ease}
+.gate.hide{opacity:0;visibility:hidden}
+.gate-card{text-align:center;padding:2.4rem 1.6rem;max-width:34rem}
+.gate h1{font-size:clamp(2.9rem,13vw,6rem);margin:.7rem 0 .5rem}
+.gate p{color:var(--muted);margin:0 auto 1.9rem;max-width:26rem}
+.gate .hint{color:var(--faint);font-size:.78rem;margin:1.3rem 0 0}
+
+/* ---------- 4. layout ---------- */
+main{opacity:0;transform:translateY(18px);transition:opacity .9s ease .1s,transform .9s ease .1s}
+main.show{opacity:1;transform:none}
+section{max-width:68rem;margin-inline:auto;padding:clamp(3.6rem,9vw,6.6rem) var(--pad)}
+.section-title{font-size:clamp(2rem,5.6vw,3.5rem);margin:.5rem 0 .8rem;line-height:1.08}
+.section-copy{color:var(--muted);max-width:38rem}
+
+/* ---------- 5. hero ---------- */
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;position:relative}
+.hero h1{font-size:clamp(2.9rem,11vw,7rem);margin:1rem 0;
+  background:linear-gradient(120deg,#fff,#ffc0d0 55%,#ff6d98);
+  -webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em}
+.hero .sub{color:var(--muted);max-width:34rem;margin:0 auto}
+.scroll-cue{position:absolute;bottom:1.6rem;left:50%;transform:translateX(-50%);
+  color:var(--faint);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase}
+.scroll-cue span{display:block;margin-top:.45rem;animation:bounce 1.9s infinite}
+@keyframes bounce{50%{transform:translateY(5px)}}
+
+/* ---------- 6. gallery ---------- */
+.gallery{margin-top:2.6rem;columns:1;column-gap:14px}
+@media(min-width:640px){.gallery{columns:2}}
+@media(min-width:1000px){.gallery{columns:3}}
+.shot{break-inside:avoid;margin:0 0 14px;position:relative;border-radius:var(--radius);
+  overflow:hidden;background:#181019;box-shadow:0 18px 44px rgba(0,0,0,.32)}
+.shot a{display:block;position:relative;text-decoration:none;
+  background-image:var(--lqip);background-size:cover;background-position:center}
+.shot img{width:100%;height:auto;aspect-ratio:var(--ar,3/4);object-fit:cover;
+  transition:transform .7s ease,opacity .6s ease;opacity:0}
+.shot img.loaded{opacity:1}
+.shot:hover img,.shot a:focus-visible img{transform:scale(1.045)}
+.shot figcaption{position:absolute;inset:auto 0 0 0;padding:2.4rem 1rem .85rem;
+  font-size:.85rem;color:#fff;
+  background:linear-gradient(transparent,rgba(8,5,12,.85));
+  opacity:0;transform:translateY(6px);transition:opacity .35s ease,transform .35s ease}
+.shot:hover figcaption,.shot a:focus-visible figcaption{opacity:1;transform:none}
+@media(hover:none){.shot figcaption{opacity:1;transform:none}}
+
+/* ---------- 7. letter & reasons ---------- */
+.letter{margin-top:2.4rem;padding:clamp(1.7rem,6vw,4.2rem);border:1px solid var(--line);
+  border-radius:28px;background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,102,140,.05));
+  box-shadow:0 26px 70px rgba(0,0,0,.26)}
+.letter p{font:400 clamp(1.02rem,1.6vw,1.16rem)/2 var(--serif);color:#f7e9ed;margin:0 0 1.35rem}
+.letter p:last-child{margin-bottom:0}
+.letter .sign{font-family:var(--sans);font-style:normal;font-size:.9rem;color:var(--muted);letter-spacing:.04em}
+.reasons{display:grid;gap:14px;margin-top:2.4rem;grid-template-columns:1fr}
+@media(min-width:720px){.reasons{grid-template-columns:repeat(3,1fr)}}
+.reason{padding:1.6rem;border-radius:var(--radius);background:var(--bg-2);border:1px solid var(--line)}
+.reason .num{font:italic 2rem/1 var(--serif);color:var(--rose)}
+.reason h3{margin:.9rem 0 .5rem;font:600 1.15rem/1.3 var(--sans);font-style:normal}
+.reason p{color:var(--muted);margin:0;font-size:.96rem}
+
+/* ---------- 8. candles ---------- */
+.wish{text-align:center}
+.cake-wrap{display:inline-grid;place-items:center;margin-top:2rem;gap:.2rem}
+.candles{display:flex;gap:clamp(.6rem,3vw,1.1rem);align-items:flex-end;justify-content:center}
+.candle{border:0;background:none;padding:0 0 .2rem;cursor:pointer;display:grid;
+  justify-items:center;gap:.18rem;border-radius:10px}
+.candle:disabled{cursor:default}
+.flame{width:9px;height:17px;border-radius:50% 50% 45% 45%;
+  background:radial-gradient(circle at 50% 72%,#fff5c2,#ffb03a 45%,#ff6a2a 78%,rgba(255,106,42,0));
+  box-shadow:0 0 16px 5px rgba(255,163,58,.42);animation:flicker 1.5s infinite ease-in-out;
+  transition:opacity .4s ease,transform .4s ease}
+@keyframes flicker{50%{transform:scale(.88) translateY(1px);opacity:.86}}
+.candle.out .flame{opacity:0;transform:scale(.2)}
+.candle .smoke{width:6px;height:6px;border-radius:50%;background:rgba(220,210,220,.5);
+  opacity:0;transition:opacity .5s ease}
+.candle.out .smoke{animation:puff 1.8s ease-out forwards}
+@keyframes puff{0%{opacity:.65;transform:translateY(0) scale(1)}
+  100%{opacity:0;transform:translateY(-26px) scale(3.4)}}
+.candle .stick{width:7px;height:clamp(30px,7vw,44px);border-radius:3px;
+  background:repeating-linear-gradient(45deg,#ffa8bd 0 5px,#f7f2f5 5px 10px)}
+.cake{width:clamp(210px,58vw,320px);height:clamp(84px,22vw,120px);border-radius:14px 14px 18px 18px;
+  background:linear-gradient(180deg,#ffd9e4 0 16%,#f7a8c4 16% 34%,#8d5a44 34% 100%);
+  box-shadow:inset 0 -14px 26px rgba(0,0,0,.28),0 24px 44px rgba(0,0,0,.34);position:relative}
+.cake:before{content:"";position:absolute;inset:16% 0 auto;height:20%;
+  background:radial-gradient(circle at 8px 0,#f7a8c4 8px,transparent 9px) repeat-x;
+  background-size:22px 100%}
+.wish-msg{margin:1.6rem auto 0;max-width:32rem;color:var(--soft);min-height:3.4rem}
+
+/* ---------- 9. final ---------- */
+.final{text-align:center;padding-bottom:clamp(5rem,12vw,8rem)}
+.final h2{font-size:clamp(2.6rem,9vw,5.6rem);margin:1.1rem 0;line-height:1.05}
+.final .section-copy{margin-inline:auto}
+.final .actions{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
+.heart-mark{display:inline-block;animation:pulse 1.6s infinite}
+@keyframes pulse{50%{transform:scale(1.13)}}
+.ps{margin-top:2.4rem;color:var(--faint);font-size:.9rem}
+footer{text-align:center;color:#6f6068;padding:0 var(--pad) 2.4rem;font-size:.8rem}
+
+/* ---------- 10. lightbox ---------- */
+.lightbox{position:fixed;inset:0;z-index:60;display:none;place-items:center;
+  background:rgba(6,4,9,.94);padding:clamp(.8rem,4vw,2.4rem)}
+.lightbox.open{display:grid}
+.lightbox img{max-width:min(94vw,1100px);max-height:82svh;border-radius:14px;
+  box-shadow:0 30px 80px rgba(0,0,0,.6);margin-inline:auto}
+.lightbox figcaption{margin-top:.9rem;text-align:center;color:var(--muted);font-size:.92rem}
+.lb-btn{position:absolute;background:rgba(255,255,255,.09);color:#fff;border:1px solid var(--line);
+  width:46px;height:46px;border-radius:50%;font-size:1.3rem;cursor:pointer;display:grid;place-items:center}
+.lb-btn:hover{background:rgba(255,255,255,.2)}
+.lb-close{top:1rem;right:1rem}
+.lb-prev{left:1rem;top:50%;transform:translateY(-50%)}
+.lb-next{right:1rem;top:50%;transform:translateY(-50%)}
+@media(max-width:640px){.lb-prev{left:.4rem}.lb-next{right:.4rem}}
+
+/* ---------- 11. floating tools + toast ---------- */
+.tools{position:fixed;right:1rem;bottom:1rem;z-index:35;display:flex;gap:.5rem}
+.tool{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;cursor:pointer;
+  border:1px solid var(--line);background:rgba(19,13,22,.9);color:var(--soft);font-size:1.05rem;
+  backdrop-filter:blur(6px);text-decoration:none}
+.tool:hover{color:#fff;border-color:var(--rose)}
+.tool[hidden]{display:none}
+.toast{position:fixed;left:50%;bottom:1.4rem;transform:translate(-50%,140%);z-index:70;
+  background:#1b1220;border:1px solid var(--line);color:var(--cream);padding:.7rem 1.1rem;
+  border-radius:999px;font-size:.9rem;transition:transform .4s ease;box-shadow:0 14px 34px rgba(0,0,0,.4)}
+.toast.show{transform:translate(-50%,0)}
+
+/* ---------- 12. scroll reveal ---------- */
+[data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+[data-reveal].in{opacity:1;transform:none}
+
+/* ---------- 13. blur-up placeholders ----------
+   Tiny 24px versions of the photos, embedded so the gallery never
+   flashes empty boxes while the real photos load on mobile data.
+   These 10 lines are optional — delete them and the site still works. */
+:root{
+  --lqip1:url("data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADwAwCdASoLABgAPt1cp0yopSOiMAgBEBuJQBOgDSv4+u/XXlA2jA0AAP76pR8TD/frNGUeLmcrbvwBMqEI5u0AdcOxhb38gOaRpPir7l9P5V0jOamJUH9774qo8lLv0RguPz2iuuU52PR7B0grIj08kBPDZprcUoQV1wAA");  --lqip2:url("data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAADwAwCdASoYAA4APt1cpkyopSOiMAgBEBuJQBOgZYAkOFAkwamu4IPgAPxdPED2ZXvnTf5zQgbo2vRcazVBCXSARrPRoyzeTBWu67ZIjJVY0Q7Q4iFm2/kiFQhrPKK1GysQLNkKbrEKaZBf6VTFjGxkni7tkna1wYBKq6fyGP5+jZta+Ztv6g+G9kYBLeGMSqJncVQAAAA=");
+  --lqip3:url("data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAAAwBACdASoYAA4APt1cpkyopSOiMAgBEBuJYgCdACLXfmMyl0znK5Cd9AAA4NTGLoUah17Wm8q8kcpImRAxWnTwaJwNQZwbuI7OxFE1A4sk9zEloG2dY/Zy0oF56OsyGH5mFj4gWoQZZmM5fwDxgIhfYpqEwa+tJrexlrpvhHv7jLUhIdwRd43ovJAY+dJRyvOM5EugzCywQAAA");  --lqip4:url("data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAQBACdASoYAA4APt1cp0yopSOiMAgBEBuJYwCsABa1nhkKt+wvA6aAwADNFedhsFOjCIOLK36vVDz7a0Ur+rpnbfW5x+lSfhBih59nMnIgBPSlQScfF2YPNbv8uh1aJN+HUcCow9TARlVyN+Xn4iVFD1v6aUy/sAAAAA==");
+  --lqip5:url("data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAACwBACdASoYAA4APt1apkyopSOiMAgBEBuJQBUeu4Fv/sD3LLJdyNcPkXw6ZPgAAP4G8kT56nVY3yX0X01baxLw1Y8xKrDuCC24Eg4DD3bbV1rVLk6Lced52Q12mKSgkSpITG9dmtVzulSCpGrZtqpbjaTswi/9hx6MI6qK5+XyArTiiFz6U0blB0rH4WbibUeHCCsFkhvGMGikSKfDNQ1Yv7e/D+aUaAiLEH+RcoNYs8/77KQgAA==");  --lqip6:url("data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAQBACdASoOABgAPt1cpkyopSOiMAgBEBuJQBOmUABR7/ZRBtseqW/1MAD+4Mbi528db/YF8ppf6l+x3HEr6RgBZprFpsbdyAwh8Zs2f69HCGeAt4A+VNzmoZLCIq9DuC/5apDl36w42xn5vxzy2phXG/iy1p/kpsQh3iNH0IsWoCeVOqZeg3M0mCXVdiVyEEFw06FgAAA=");
+  --lqip7:url("data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAQBACdASoOABgAPt1apkyopSOiMAgBEBuJaQAD5LIu0vzTGk+Ye9uIAAD+8Q94ooflKP391muJ2zGYfPWZQsmewrXQjapOhg+drNOjcDGhgxpdmibGrvQhSZfZp2y2inUjk0GE/OkbaL194v5pYB3FF6pknQ2O6kgAAA==");  --lqip8:url("data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAAAQBACdASoOABgAPt1apkyopSOiMAgBEBuJYgCdAYvW5T0SMTD8k9S2qAD+9DrvEApRAMkYagvAJp9RqKh7YK/OiaLpcRGcclTNujAQtjVRbqel1ZT4T/NG/fAIjGZdo0+C1xuH48j2CyunACsgRYEvGdO5ZSqqt6gUYBpGkjh3Vn3CLwtSllatvPR7xh19vN+/t8oIhF8LKQYFP7g4n/qH/eokpTyNogk6uS5Xvq8UOTpAAAA=");
+  --lqip9:url("data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAABQBACdASoOABgAPt1apkyopSOiMAgBEBuJQBOmUABp57at0G3+8D1ZnhHAAP7IQeVrZqSZEF0V0uTBQ73d2JSEpckjSixlfSajAPLXEtHWGPbPWdEoEV/y6VsbkAWRxl/RXqP7e8GhruRDTXZy+VWj6mN2bJAVBgbDwcbosKN51NjsdHuIaWTKD42DwY5gDYAqXRLpExXut2dPRU0AAA==");  --lqip10:url("data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAADwBACdASoOABgAPt1apkyopSOiMAgBEBuJYgC7MoCiAXgJnUYK8Oy7jif1rOXOWUAA/vEhiYZmFhqBfJ9CxKRsd+6If9rsc++x73ZIk/2M7p+z9LyIQ2AXkyyDait6tWIkPx3QTfv2O78OhRp8kdtshwNSgsxMjdAcEww7L6plr0doDsPejBUC7bAf0cs0cO85Qh1yBWFjreKBEnHfTR60yH/o0U/Ft91RufWb2IKgRocO105zDXZyaWB0Cfk77hqLXqb84AA=");
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*:before,*:after{animation-duration:.001ms !important;animation-iteration-count:1 !important;
+    transition-duration:.001ms !important}
+  [data-reveal]{opacity:1;transform:none}
+  #hearts{display:none}
+}
+</style>
+</head>
+<body class="no-js">
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="hearts" aria-hidden="true"></canvas>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- ================= INTRO ================= -->
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+  <div class="gate-card">
+    <div class="eyebrow">A little surprise for</div>
+    <h1 id="gate-title">Dharsuuu</h1>
+    <p>There are things that are easier to feel than to say. So I made you a tiny corner of the internet instead.</p>
+    <button class="btn" id="open" type="button">Open your surprise</button>
+    <p class="hint">Take it slowly. It gets better further down.</p>
+  </div>
+</div>
+
+<main id="main">
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Happy Birthday</div>
+      <h1>To my Dharsuuu</h1>
+      <p class="sub">If I could give you one thing today, it would be to see yourself the way I see you — and know how special you are to me.</p>
+    </div>
+    <div class="scroll-cue">scroll slowly <span aria-hidden="true">↓</span></div>
+  </section>
+
+  <!-- ================= MEMORIES =================
+       To swap a photo: replace the file in dharsuuu_birthday/assets/
+       keeping the same name (photo1.jpg … photo10.jpg). -->
+  <section id="memories" data-reveal>
+    <div class="eyebrow">The memories</div>
+    <h2 class="section-title">A few moments I want to keep forever.</h2>
+    <p class="section-copy">Some are beautiful. Some are ridiculous. That is exactly why I love them. Tap any photo to see it properly.</p>
+
+    <div class="gallery" id="gallery">
+      <figure class="shot" style="--ar:684/1536;--lqip:var(--lqip1)">
+        <a href="dharsuuu_birthday/assets/photo1.jpg" data-caption="Purple was always your colour.">
+          <img src="dharsuuu_birthday/assets/photo1.jpg" width="684" height="1536" alt="Dharsuuu on a terrace in a purple salwar" loading="lazy" decoding="async">
+          <figcaption>Purple was always your colour.</figcaption>
+        </a>
+      </figure>
+      <figure class="shot" style="--ar:1536/864;--lqip:var(--lqip2)">
+        <a href="dharsuuu_birthday/assets/photo2.jpg" data-caption="Mirror selfies: officially a tradition.">
+          <img src="dharsuuu_birthday/assets/photo2.jpg" width="1536" height="864" alt="The two of us in a mirror selfie with chins resting on our hands" loading="lazy" decoding="async">
+          <figcaption>Mirror selfies: officially a tradition.</figcaption>
+        </a>
+      </figure>
+      <figure class="shot" style="--ar:1536/864;--lqip:var(--lqip3)">
+        <a href="dharsuuu_birthday/assets/photo3.jpg" data-caption="Exhibit A: why nobody takes us seriously.">
+          <img src="dharsuuu_birthday/assets/photo3.jpg" width="1536" height="864" alt="Mirror selfie with peace signs under purple light" loading="lazy" decoding="async">
+          <figcaption>Exhibit A: why nobody takes us seriously.</figcaption>
+        </a>
+      </figure>
+      <figure class="shot" style="--ar:1536/864;--lqip:var(--lqip4)">
+        <a href="dharsuuu_birthday/assets/photo4.jpg" data-caption="The hearts were mostly already there.">
+          <img src="dharsuuu_birthday/assets/photo4.jpg" width="1536" height="864" alt="Mirror selfie with a hearts filter" loading="lazy" decoding="async">
+          <figcaption>The hearts were mostly already there.</figcaption>
+        </a>
+      </figure>
+      <figure class="shot" style="--ar:1536/864;--lqip:var(--lqip5)">
+        <a href="dharsuuu_birthday/assets/photo5.jpg" data-caption="Dog-filter era. Zero regrets.">
+          <img src="dharsuuu_birthday/assets/photo5.jpg" width="1536" height="864" alt="The two of us with dog filters, hand under chin" loading="lazy" decoding="async">
+          <figcaption>Dog-filter era. Zero regrets.</figcaption>
+        </a>
+      </figure>
+      <figure class="shot" style="--ar:865/1536;--lqip:var(--lqip6)">
+        <a href="dharsuuu_birthday/assets/photo6.jpg" data-caption="Concentration: maximum.">
+          <img src="dharsuuu_birthday/assets/photo6.jpg" width="865" height="1536" alt="Close-up selfie of the two of us with dog filters" loading="lazy" decoding="async">
+          <figcaption>Concentration: maximum.</figcaption>
+        </a>
+      </figure>
+      <figure class="shot" style="--ar:864/1536;--lqip:var(--lqip7)">
+        <a href="dharsuuu_birthday/assets/photo7.jpg" data-caption="Secret identities, same energy.">
+          <img src="dharsuuu_birthday/assets/photo7.jpg" width="864" height="1536" alt="The two of us wearing Spider-Man masks in a black and white photo" loading="lazy" decoding="async">
+          <figcaption>Secret identities, same energy.</figcaption>
+        </a>
+      </figure>
+      <figure class="shot" style="--ar:864/1536;--lqip:var(--lqip8)">
+        <a href="dharsuuu_birthday/assets/photo8.jpg" data-caption="Saree day. Handle with respect.">
+          <img src="dharsuuu_birthday/assets/photo8.jpg" width="864" height="1536" alt="Dharsuuu in a saree beside a tiled wall" loading="lazy" decoding="async">
+          <figcaption>Saree day. Handle with respect.</figcaption>
+        </a>
+      </figure>
+      <figure class="shot" style="--ar:865/1536;--lqip:var(--lqip9)">
+        <a href="dharsuuu_birthday/assets/photo9.jpg" data-caption="Peace, but make it elegant.">
+          <img src="dharsuuu_birthday/assets/photo9.jpg" width="865" height="1536" alt="Dharsuuu in a saree taking a mirror selfie with a peace sign" loading="lazy" decoding="async">
+          <figcaption>Peace, but make it elegant.</figcaption>
+        </a>
+      </figure>
+      <figure class="shot" style="--ar:864/1536;--lqip:var(--lqip10)">
+        <a href="dharsuuu_birthday/assets/photo10.jpg" data-caption="Two of us, one brain cell — still winning.">
+          <img src="dharsuuu_birthday/assets/photo10.jpg" width="864" height="1536" alt="The two of us sitting together with dog filters" loading="lazy" decoding="async">
+          <figcaption>Two of us, one brain cell — still winning.</figcaption>
+        </a>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= LETTER ================= -->
+  <section id="letter" data-reveal>
+    <div class="eyebrow">A letter</div>
+    <h2 class="section-title">For you, Dharsuuu.</h2>
+    <div class="letter">
+      <p>Happy birthday to the girl who somehow became one of the most important parts of my life.</p>
+      <p>I don't need a perfect story. I want ours — the silly photos, the random moments, the teasing, the little things only we understand, and all the memories we haven't made yet.</p>
+      <p>You deserve to be happy, genuinely happy. I hope this year gives you more reasons to smile, more confidence in yourself, and everything you have been quietly wishing for.</p>
+      <p>And selfishly, I hope I get to be there for a lot of it.</p>
+      <p>Happy Birthday, Dharsuuu. <span aria-hidden="true">❤</span></p>
+      <p class="sign">— always yours</p>
+    </div>
+  </section>
+
+  <!-- ================= WHY YOU ================= -->
+  <section id="why" data-reveal>
+    <div class="eyebrow">Why you</div>
+    <h2 class="section-title">Three unfair advantages you have.</h2>
+    <div class="reasons">
+      <div class="reason">
+        <div class="num">01</div>
+        <h3>Your smile</h3>
+        <p>It can change the mood of a whole moment without you even trying.</p>
+      </div>
+      <div class="reason">
+        <div class="num">02</div>
+        <h3>Your chaos</h3>
+        <p>Life with you is never completely predictable. Honestly, I would not want it any other way.</p>
+      </div>
+      <div class="reason">
+        <div class="num">03</div>
+        <h3>You being you</h3>
+        <p>No performance, no pretending. Just you. That is the version I want around.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MAKE A WISH ================= -->
+  <section id="wish" class="wish" data-reveal>
+    <div class="eyebrow">Your turn</div>
+    <h2 class="section-title">Make a wish.</h2>
+    <p class="section-copy" style="margin-inline:auto">Tap each candle to blow it out. Nobody is watching.</p>
+
+    <div class="cake-wrap">
+      <div class="candles" id="candles" role="group" aria-label="Birthday candles"></div>
+      <div class="cake" aria-hidden="true"></div>
+    </div>
+
+    <p class="wish-msg" id="wish-msg" role="status" aria-live="polite"></p>
+    <button class="btn ghost" id="relight" type="button" hidden>Light them again</button>
+  </section>
+
+  <!-- ================= FINAL ================= -->
+  <section id="final" class="final" data-reveal>
+    <div class="heart-mark" aria-hidden="true">
+      <svg width="54" height="54" viewBox="0 0 64 64" role="img" aria-label="Heart"><path fill="url(#hg)" d="M32 51.5S11.5 39 11.5 26.2C11.5 19.2 17 13.5 24 13.5c3.5 0 6.4 1.7 8 4.3 1.6-2.6 4.5-4.3 8-4.3 7 0 12.5 5.7 12.5 12.7C52.5 39 32 51.5 32 51.5Z"/><defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffa2b8"/><stop offset="1" stop-color="#ff3f6f"/></linearGradient></defs></svg>
+    </div>
+    <div class="eyebrow">One last thing</div>
+    <h2>Happy Birthday,<br>Dharsuuu.</h2>
+    <p class="section-copy">Websites are temporary. What they are made of is not.</p>
+    <div class="actions">
+      <button class="btn" id="rain" type="button">One more surprise</button>
+      <button class="btn ghost" id="share" type="button">Share this page</button>
+    </div>
+    <p class="ps">P.S. You owe me one hug for this.</p>
+  </section>
+
+  <footer>Made with too much love, probably.</footer>
+</main>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <button class="lb-btn lb-close" id="lb-close" type="button" aria-label="Close">✕</button>
+  <button class="lb-btn lb-prev" id="lb-prev" type="button" aria-label="Previous photo">‹</button>
+  <button class="lb-btn lb-next" id="lb-next" type="button" aria-label="Next photo">›</button>
+  <figure style="margin:0">
+    <img id="lb-img" alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+</div>
+
+<div class="tools">
+  <button class="tool" id="music" type="button" hidden aria-pressed="false" aria-label="Play background music">♪</button>
+  <a class="tool" href="#main" aria-label="Back to top">↑</a>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+  "use strict";
+  document.body.classList.remove("no-js");
+  document.documentElement.classList.remove("no-js");
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const $  = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
+  /* ---------- 1. intro gate ---------- */
+  const gate = $("#gate"), main = $("#main");
+  const openSite = (withRain) => {
+    gate.classList.add("hide");
+    main.classList.add("show");
+    if (withRain && !reduce) burst(46);
+    setTimeout(() => { gate.hidden = true; }, 800);
+  };
+  $("#open").addEventListener("click", () => openSite(true));
+  gate.addEventListener("keydown", (e) => { if (e.key === "Escape") openSite(false); });
+  main.classList.add("show");   // warm the page up behind the gate
+
+  /* ---------- 2. floating hearts ---------- */
+  const canvas = $("#hearts"), ctx = canvas.getContext("2d");
+  let hearts = [], raf = null;
+  const size = () => {
+    const dpr = Math.min(devicePixelRatio || 1, 2);
+    canvas.width = innerWidth * dpr; canvas.height = innerHeight * dpr;
+    canvas.style.width = innerWidth + "px"; canvas.style.height = innerHeight + "px";
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  };
+  size();
+  addEventListener("resize", size, { passive: true });
+
+  function burst(n = 40) {
+    if (reduce) return;
+    for (let i = 0; i < n; i++) {
+      hearts.push({
+        x: Math.random() * innerWidth,
+        y: innerHeight + 20 + Math.random() * 120,
+        s: 10 + Math.random() * 16,
+        v: 1.4 + Math.random() * 2.6,
+        a: Math.random() * 6.28,
+        drift: Math.random() * 0.9 + 0.3,
+        life: 1
+      });
+    }
+    if (!raf) raf = requestAnimationFrame(draw);
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, innerWidth, innerHeight);
+    hearts = hearts.filter(h => h.y > -40 && h.life > 0);
+    for (const h of hearts) {
+      h.y -= h.v; h.a += 0.02; h.x += Math.sin(h.a) * h.drift;
+      h.life -= 0.0016;
+      ctx.save();
+      ctx.globalAlpha = Math.max(0, Math.min(1, h.life));
+      ctx.translate(h.x, h.y);
+      ctx.rotate(Math.sin(h.a) * 0.18);
+      ctx.fillStyle = "rgba(255,105,145,.85)";
+      ctx.font = h.s + "px serif";
+      ctx.fillText("♥", 0, 0);
+      ctx.restore();
+    }
+    if (hearts.length) raf = requestAnimationFrame(draw);
+    else { raf = null; ctx.clearRect(0, 0, innerWidth, innerHeight); }
+  }
+
+  /* ---------- 3. reveal on scroll ---------- */
+  const revealTargets = $$("[data-reveal]");
+  if (!("IntersectionObserver" in window)) {
+    revealTargets.forEach(el => el.classList.add("in"));
+  } else {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.06 });
+    revealTargets.forEach(el => io.observe(el));
+  }
+
+  /* ---------- 4. photos fade in over their blur placeholder ---------- */
+  $$(".shot img").forEach(img => {
+    const done = () => img.classList.add("loaded");
+    if (img.complete && img.naturalWidth) done();
+    else img.addEventListener("load", done, { once: true });
+  });
+
+  /* ---------- 5. lightbox ---------- */
+  const lb = $("#lightbox"), lbImg = $("#lb-img"), lbCap = $("#lb-cap");
+  const shots = $$(".shot a");
+  let idx = 0, lastFocus = null;
+
+  function show(i) {
+    idx = (i + shots.length) % shots.length;
+    const a = shots[idx], img = $("img", a);
+    lbImg.src = a.getAttribute("href");
+    lbImg.alt = img ? img.alt : "";
+    lbCap.textContent = a.dataset.caption || "";
+  }
+  function openLb(i) {
+    lastFocus = document.activeElement;
+    show(i);
+    lb.hidden = false; lb.classList.add("open");
+    document.body.style.overflow = "hidden";
+    $("#lb-close").focus();
+  }
+  function closeLb() {
+    lb.classList.remove("open"); lb.hidden = true;
+    document.body.style.overflow = "";
+    lbImg.src = "";
+    if (lastFocus) lastFocus.focus();
+  }
+  shots.forEach((a, i) => a.addEventListener("click", (e) => { e.preventDefault(); openLb(i); }));
+  $("#lb-close").addEventListener("click", closeLb);
+  $("#lb-prev").addEventListener("click", () => show(idx - 1));
+  $("#lb-next").addEventListener("click", () => show(idx + 1));
+  lb.addEventListener("click", (e) => { if (e.target === lb) closeLb(); });
+  addEventListener("keydown", (e) => {
+    if (lb.hidden) return;
+    if (e.key === "Escape") closeLb();
+    if (e.key === "ArrowLeft") show(idx - 1);
+    if (e.key === "ArrowRight") show(idx + 1);
+  });
+  let x0 = null;                                  // swipe on phones
+  lb.addEventListener("touchstart", (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener("touchend", (e) => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 48) show(dx < 0 ? idx + 1 : idx - 1);
+    x0 = null;
+  }, { passive: true });
+
+  /* ---------- 6. candles ---------- */
+  const CANDLES = 5;
+  const holder = $("#candles"), msg = $("#wish-msg"), relight = $("#relight");
+  let outCount = 0;
+
+  function buildCandles() {
+    holder.innerHTML = "";
+    outCount = 0;
+    msg.textContent = "";
+    relight.hidden = true;
+    for (let i = 0; i < CANDLES; i++) {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "candle";
+      b.setAttribute("aria-label", "Blow out candle " + (i + 1));
+      b.innerHTML = '<span class="smoke" aria-hidden="true"></span><span class="flame" aria-hidden="true"></span><span class="stick" aria-hidden="true"></span>';
+      b.addEventListener("click", () => blow(b));
+      holder.appendChild(b);
+    }
+  }
+  function blow(b) {
+    if (b.classList.contains("out")) return;
+    b.classList.add("out");
+    b.disabled = true;
+    b.setAttribute("aria-label", "Candle out");
+    outCount++;
+    const left = CANDLES - outCount;
+    if (left > 0) {
+      msg.textContent = left === 1 ? "One candle left…" : (left + " candles left…");
+      burst(6);
+    } else {
+      msg.innerHTML = "<strong>Wish received.</strong> I hope every single one of them comes true — and that I get to watch it happen.";
+      burst(70);
+      relight.hidden = false;
+    }
+  }
+  relight.addEventListener("click", buildCandles);
+  buildCandles();
+
+  /* ---------- 7. buttons ---------- */
+  $("#rain").addEventListener("click", () => { burst(80); toast("Happy birthday, Dharsuuu 💕"); });
+
+  const toastEl = $("#toast");
+  let toastT = null;
+  function toast(text) {
+    toastEl.textContent = text;
+    toastEl.classList.add("show");
+    clearTimeout(toastT);
+    toastT = setTimeout(() => toastEl.classList.remove("show"), 2600);
+  }
+
+  $("#share").addEventListener("click", async () => {
+    const data = { title: "For Dharsuuu", text: "A little surprise, made just for you.", url: location.href };
+    try {
+      if (navigator.share) { await navigator.share(data); return; }
+      await navigator.clipboard.writeText(location.href);
+      toast("Link copied — send it to her 💌");
+    } catch (err) {
+      toast("Copy this link: " + location.href);
+    }
+  });
+
+  /* ---------- 8. music (only shows up if the file exists) ----------
+     Drop a song at dharsuuu_birthday/assets/music.mp3 and the ♪
+     button appears by itself. No other change needed. */
+  const musicBtn = $("#music");
+  const MUSIC = "dharsuuu_birthday/assets/music.mp3";
+  let track = null;
+  fetch(MUSIC, { method: "HEAD" }).then(r => {
+    if (!r.ok) return;
+    track = new Audio(MUSIC);
+    track.loop = true; track.preload = "metadata"; track.volume = 0.55;
+    musicBtn.hidden = false;
+  }).catch(() => {});
+  musicBtn.addEventListener("click", () => {
+    if (!track) return;
+    if (track.paused) {
+      track.play().then(() => {
+        musicBtn.textContent = "❚❚";
+        musicBtn.setAttribute("aria-pressed", "true");
+        musicBtn.setAttribute("aria-label", "Pause background music");
+      }).catch(() => toast("Tap once more to start the music"));
+    } else {
+      track.pause();
+      musicBtn.textContent = "♪";
+      musicBtn.setAttribute("aria-pressed", "false");
+      musicBtn.setAttribute("aria-label", "Play background music");
+    }
+  });
+
+  /* ---------- 9. scroll progress ---------- */
+  const bar = $("#progress");
+  const onScroll = () => {
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + "%";
+  };
+  addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+</body>
+</html>
